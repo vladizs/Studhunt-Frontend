@@ -5,18 +5,24 @@
         <img src="../assets/img/logo.svg" alt="Logo" class="header__logo">
       </router-link>
       <nav class="header__navbar">
-        <router-link to="/new_post">Подать объявление</router-link>
+        <router-link to="/newpost">Подать объявление</router-link>
         <router-link to="/vacancies">Вакансии</router-link>
         <router-link to="/students">Поиск студентов</router-link>
       </nav>
       <div class="header__account">
-        <button class="btn btn_auth">Войти в аккаунт</button>
+        <button class="btn_auth" v-on:click="openModal">Войти в аккаунт</button>
       </div>
     </div>
+    <modal name="auth" width="650px" height="380px"><modal-auth /></modal>
   </header>
 </template>
 
 <style lang="scss" scoped>
+
+.vm--modal {
+  background: none!important;
+  box-shadow: none!important;
+}
 
 header.header {
   height: 50px;
@@ -63,13 +69,30 @@ header.header {
 
 </style>
 
+<style>
+.vm--modal {
+  background: none !important;
+  box-shadow: none !important;
+}
+</style>
+
 <script>
+import ModalAuth from './ModalAuth.vue';
+
 export default {
   props: {
     accountId: {
       type: String,
       default: null,
     },
+  },
+  methods: {
+    openModal() {
+      this.$modal.show('auth');
+    },
+  },
+  components: {
+    ModalAuth,
   },
 };
 </script>
