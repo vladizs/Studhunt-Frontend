@@ -76,6 +76,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 6px;
+  margin-left: 6px;
 }
 
 .filter_title {

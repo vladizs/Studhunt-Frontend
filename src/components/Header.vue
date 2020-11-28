@@ -48,6 +48,7 @@ header.header {
   width: 131px;
   height: 28px;
   font-size: 14px;
+  margin-right: 24px;
   background: #E1EFFF;
   border: none;
   border-radius: 6px;

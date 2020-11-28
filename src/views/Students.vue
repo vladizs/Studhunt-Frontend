@@ -6,7 +6,9 @@
     </div>
 
     <div class="content">
-      <div class="content__posts"></div>
+      <div class="content__posts">
+        <student-group-post />
+      </div>
       <filters />
     </div>
 
@@ -36,16 +38,19 @@
 
 .content__posts {
   width: 705px;
+  margin-right: 60px;
 }
 
 </style>
 
 <script>
 import Filters from '../components/Filters.vue';
+import StudentGroupPost from '../components/StudentGroupPost.vue';
 
 export default {
   components: {
     Filters,
+    StudentGroupPost,
   },
 };
 </script>
