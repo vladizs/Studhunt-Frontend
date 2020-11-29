@@ -72,17 +72,15 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 body{
     background-color: #000000;
     font-family: 'Rubik', sans-serif;
-    font-family: 'Roboto', sans-serif;
 }
 button { border: none; outline: none; }
 input{border: none; outline: none;}
 .modal-frame{
     font-family: 'Rubik', sans-serif;
-    font-family: 'Roboto', sans-serif;
     background-color: #fff;
     width: 619px;
     height: 376px;
